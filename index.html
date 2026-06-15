@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Career Compass</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <h1>Career Compass</h1>
+
+<button onclick="toggleDarkMode()">
+    🌙 Dark Mode
+</button>
+
+
+    <h2>Add Internship Application</h2>
+
+    <input
+        type="text"
+        id="company"
+        placeholder="Company Name">
+
+    <input
+        type="text"
+        id="role"
+        placeholder="Role">
+
+    <select id="status">
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Selected">Selected</option>
+    </select>
+
+    <button onclick="addApplication()">
+        Add Application
+    </button>
+
+    <h2>Applications</h2>
+
+    <select
+        id="filterStatus"
+        onchange="displayApplications()">
+
+        <option value="All">All</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Selected">Selected</option>
+
+    </select>
+
+    <br><br>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Company"
+        onkeyup="displayApplications()">
+
+    <br><br>
+
+    <select
+        id="sortOption"
+        onchange="displayApplications()">
+
+        <option value="None">
+            No Sorting
+        </option>
+
+        <option value="AZ">
+            A-Z
+        </option>
+
+        <option value="ZA">
+            Z-A
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3 id="totalApplications">
+                Total Applications: 0
+            </h3>
+        </div>
+
+        <div class="card">
+            <h3 id="appliedCount">
+                Applied: 0
+            </h3>
+        </div>
+        <div class="card">
+    <h3 id="successRate">0%</h3>
+    <p>Success Rate</p>
+</div>
+
+        <div class="card">
+            <h3 id="interviewCount">
+                Interview: 0
+            </h3>
+        </div>
+
+        <div class="card">
+            <h3 id="rejectedCount">
+                Rejected: 0
+            </h3>
+        </div>
+
+        <div class="card">
+            <h3 id="selectedCount">
+                Selected: 0
+            </h3>
+        </div>
+
+    </div>
+
+    <ul id="applicationList"></ul>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

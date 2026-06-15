@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    padding: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+h3 {
+    color: #2c3e50;
+}
+.dashboard {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 180px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin: 0;
+}
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    li button {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
